@@ -1,0 +1,95 @@
+/* styles.css */
+
+/* Global styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cascadia Code', sans-serif; /* Modern monospaced font */
+  background: linear-gradient(135deg, #1e1e2e 0%, #252538 100%); /* Gradient background */
+  color: #ffffff; /* White text color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Border with slight transparency */
+}
+
+.profile-photo img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 5px solid rgba(255, 255, 255, 0.5); /* Semi-transparent border */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-photo img:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.text h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ffffff; /* White text for main heading */
+  margin: 20px 0 10px;
+}
+
+.text p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #b0b0b0; /* Light grey text for additional information */
+  margin: 0 0 20px;
+}
+
+.social-buttons {
+  margin: 20px 0;
+  display: flex;
+  gap: 15px; /* Space between buttons */
+}
+
+.social-button {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff; /* White icon color */
+  font-size: 30px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-button:hover {
+  color: #7289da; /* Discord-like hover color */
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.hidden-text {
+  display: none;
+  color: #ffffff; /* Set text color to white */
+  font-family: 'Cascadia Code', sans-serif; /* Matching font family */
+  font-size: 16px; /* Smaller font size */
+  margin-top: 10px;
+  /*background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+  padding: 8px 12px; /* Smaller padding */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Soft shadow */
+  max-width: 90%;
+  word-wrap: break-word;
+  text-align: center;
+}
+
+#money:target .hidden-text {
+  display: block;
+}
