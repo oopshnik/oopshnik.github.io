@@ -6,7 +6,7 @@ body, html {
   padding: 0;
   font-family: 'Cascadia Code', sans-serif; /* Modern monospaced font */
   background: linear-gradient(135deg, rgba(30, 30, 46, 0.8) 0%, rgba(37, 37, 56, 0.8) 100%), 
-              url('background.jpg') no-repeat center center fixed; /* Gradient over background image */
+              url('../assets/background.jpg') no-repeat center center fixed; /* Gradient over background image */
   background-size: cover; /* Cover the entire page */
   color: #ffffff; /* White text color */
   display: flex;
@@ -21,8 +21,8 @@ body, html {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 40px;
-  max-width: 800px;
+  padding: 125px;
+  max-width: 400px;
   background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
   backdrop-filter: blur(10px); /* Blur effect */
   border-radius: 20px; /* Rounded corners */
@@ -58,40 +58,40 @@ body, html {
   margin: 0 0 20px;
 }
 
-.social-buttons {
-  margin: 20px 0;
+.icons {
   display: flex;
-  gap: 15px; /* Space between buttons */
+  justify-content: center;
+  gap: 35px;
 }
 
-.social-button {
-  display: inline-block;
+.icons a {
   text-decoration: none;
-  color: #ffffff; /* White icon color */
-  font-size: 30px;
-  transition: color 0.3s, transform 0.3s;
+  display: inline-flex;
+  align-items: center;
 }
 
-.social-button:hover {
-  color: #7289da; /* Discord-like hover color */
-  transform: translateY(-5px); /* Lift effect on hover */
+.icons .material-icons {
+  font-size: 50px;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.hidden-text {
-  display: none;
-  color: #ffffff; /* Set text color to white */
-  font-family: 'Cascadia Code', sans-serif; /* Matching font family */
-  font-size: 1rem; /* Smaller font size */
-  margin-top: 10px;
-  background-color: rgba(0, 0, 0, 0.0); /* Dark semi-transparent background */
-  padding: 8px 12px; /* Smaller padding */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Soft shadow */
-  max-width: 90%;
-  word-wrap: break-word;
-  text-align: center;
+/* Custom colors for each icon */
+.icon-telegram {
+  color: #0088cc; /* Telegram color */
 }
 
-#money:target .hidden-text {
-  display: block;
+.icon-discord {
+  color: #5865F2; /* Discord color */
 }
+
+.icon-email {
+  color: #D44638; /* Email color */
+}
+
+/* Hover effect for all icons */
+.icons .material-icons:hover {
+  transform: scale(1.2); /* Slightly bigger on hover */
+  color: #ffffff; /* White color on hover for all icons */
+}
+
+
